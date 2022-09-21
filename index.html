@@ -10,39 +10,47 @@
 </head>
 
 <body>
-    <h1>Simulador de renimientos</h1>
+    <nav>
+        <h1 class="historialStyle"><a href="./historial.html">Historial de inversiones</a></h1>
+    </nav>
+
+    <h1>Simulador de rendimientos</h1>
     <br>
     <form>
-        <div>Inversion</div>
-        <input type="number" id="inversion" />
+
+        <div>Empresa, activo, Fondo en donde invirtio</div>
+        <input type="text" id="nombre" placeholder="Indicar empresa o activo invertido" />
+
+        <br><br>
+
+
+        <div>Inversion (solo numeros)</div>
+        <input type="number" id="inversion" placeholder="Ej: 1000" />
 
         <br><br>
 
         <div>
-            Rendimimeto
-            <br>
-            1- 5%
-            <br>
-            2- 10%
-            <br>
-            3- 15%
-            <br>
-            4- 20%
+            Rendimimeto de su inversion solo en numeros (sin el %)
         </div>
-        <input type="number" id="rendimiento"/>
-    
+        <input type="number" id="rendimiento" placeholder="10 20 30"/>
+
         <br><br>
 
-<!--         <div>Años de la inversion</div>
-        <input type="number" value="Calcular" id="años"/>
- -->
+        <div>Años de la inversion</div>
+        <input type="number" value="Calcular" id="años" placeholder="Ingrese los años" />
+
     </form>
-    
+
     <br><br>
 
-    <button type="button" onclick="sumar();">Calcular</button>
+    <button type="button" onclick="calcular();">Calcular</button>
+
+    <br><br>
+
     <div id="el-resultado"></div>
     <script src="index.js"></script>
+    <script src="storage.js"></script>
+
 </body>
 
 </html>

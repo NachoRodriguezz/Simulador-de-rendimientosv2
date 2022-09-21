@@ -3,3 +3,8 @@
     color: white; 
 }
 
+.historialStyle {
+    display: flex;
+    justify-content: right;
+}
+
