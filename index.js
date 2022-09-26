@@ -3,19 +3,16 @@ function calcular() {
     let inversion = document.getElementById('inversion').value;
     let rendimiento = document.getElementById('rendimiento').value;
     let años = document.getElementById('años').value;
-    let ganancias = (inversion * (rendimiento/100) * años);
+    let ganancias = (inversion * (rendimiento / 100) * años);
 
     document.getElementById('el-resultado').innerHTML = ganancias;
 
     let resultadoHistorial = ganancias;
-    localStorage.setItem(nombre , resultadoHistorial);
-
-    document.getElementById('historial').innerHTML = localStorage.getItem(nombre, resultadoHistorial);
-
+    localStorage.setItem(nombre, resultadoHistorial);
 }
 
-function historial(){
+const arrayHistorial = []; 
 
-    document.getElementById('historial').innerHTML = localStorage.getItem(nombre);
+arrayHistorial.push = JSON.parse(localStorage.getItem()) || 'El historial esta vacio';
 
-}
+document.getElementById('historial').innerHTML = arrayHistorial; 
