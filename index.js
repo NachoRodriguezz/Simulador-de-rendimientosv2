@@ -15,11 +15,11 @@ function mostrarHistorial(){
     transacciones.forEach(item => {
         let itemHistorial = document.createElement("tr");
         itemHistorial.innerHTML = `
-        <td> Invirtio en  ${item.nombre} /</td>
-        <td>Su inversion fe de $${item.inversion} /</td>
-        <td>Su rendimiento anual fue de %${item.rendimiento}/</td>
-        <td>Cantidad de años${item.años}/</td>
-        <td>Sus ganancias sin contar la inversion fue de $${item.ganancias}/</td>`;
+        <tr><p>Invirtio en  ${item.nombre} /</p></tr>
+        <tr><p>Su inversion fe de $${item.inversion} /</p></tr>
+        <tr><p>Su rendimiento anual fue de %${item.rendimiento}/</p></tr>
+        <tr><p>Cantidad de años${item.años}/</p></tr>
+        <tr><p>Sus ganancias sin contar la inversion fue de $${item.ganancias}/</p></tr>`;
         contenedorHistorial.append(itemHistorial);
     });
 }
