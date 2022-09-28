@@ -4,7 +4,7 @@ function calcular() {
     let rendimiento = document.getElementById('rendimiento').value;
     let años = document.getElementById('años').value;
     let ganancias = (inversion * (rendimiento / 100) * años);
-    document.getElementById('el-resultado').innerHTML = ganancias;
+    document.getElementById('el-resultado').innerHTML = ganancias = (ganancias || "Tus ganancias son nulas");
     transacciones.push(new inversionTotal(nombre, inversion, rendimiento, años, ganancias))
     localStorage.clear();
     localStorage.setItem("transactionHistory", JSON.stringify(transacciones));
