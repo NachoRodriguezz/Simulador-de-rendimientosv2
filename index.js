@@ -5,10 +5,15 @@ function calcular() {
     let años = document.getElementById('años').value;
     let ganancias = (inversion * (rendimiento / 100) * años);
     document.getElementById('el-resultado').innerHTML = ganancias = (ganancias || "Tus ganancias son nulas");
+
     transacciones.push(new inversionTotal(nombre, inversion, rendimiento, años, ganancias))
     localStorage.clear();
     localStorage.setItem("transactionHistory", JSON.stringify(transacciones));
     mostrarHistorial();
+    Toastify({
+        text: "Su inversion a sido guardada en el historial!",
+        duration: 3000
+      }).showToast();
 };
 
 function mostrarHistorial(){
@@ -42,5 +47,16 @@ mostrarHistorial();
 function borrarHistorial() {
     localStorage.clear("transactionHistory");
 }
-
+/* 
 document.getElementById("borrarHistorial").addEventListener('click',borrarHistorial);
+ */
+let boton = document.getElementById("borrarHistorial");
+
+boton.addEventListener("click", () => {
+  Toastify({
+    text: "Su historial a sido borrado correctamente!",
+    duration: 5000
+  }).showToast();
+  borrarHistorial();
+});
+
