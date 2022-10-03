@@ -11,52 +11,31 @@
 </head>
 
 <body>
-    <h1>Simulador de rendimientos</h1>
-    <br>
-    <form>
+    <h1 class="cajita">Simulador de rendimientos</h1>
 
-        <div>Empresa, activo, Fondo en donde invirtio</div>
-        <input type="text" id="nombre" placeholder="Indicar empresa o activo invertido" />
-
-        <br><br>
-
-
-        <div>Inversion (solo numeros)</div>
-        <input type="number" id="inversion" placeholder="Ej: 1000" />
-
-        <br><br>
-
-        <div>
-            Rendimimeto de su inversion solo en numeros (sin el %)
-        </div>
-        <input type="number" id="rendimiento" placeholder="10 20 30"/>
-
-        <br><br>
-
-        <div>Años de la inversion</div>
-        <input type="number" value="Calcular" id="años" placeholder="Ingrese los años" />
-
-    </form>
-
-    <br><br>
-
-    <button type="button" id="botonCalcular">Calcular</button>
-
-    <br><br>
-
+    <main>
+        <section class="cajita">
+            <form>
+                <div>Empresa, activo, Fondo en donde invirtio</div>
+                <input type="text" id="nombre" placeholder="Indicar empresa o activo invertido" />
+                <div>Inversion (solo numeros)</div>
+                <input type="number" id="inversion" placeholder="Ej: 1000" />
+                <div>
+                    Rendimimeto de su inversion solo en numeros (sin el %)
+                </div>
+                <input type="number" id="rendimiento" placeholder="10 20 30" />
+                <div>Años de la inversion</div>
+                <input type="number" value="Calcular" id="años" placeholder="Ingrese los años" />
+            </form>
+        </section>
+    </main>
+    <button class="cajita" type="button" id="botonCalcular">Calcular</button>
     <div id="el-resultado"></div>
+    <h1 class="cajita" >Historial de inversiones</h1>
 
+    <div class="cajita" id="historial"></div>
 
-    <h1>Historial de inversiones</h1>
-
-    <br><br><br>
-
-    <div id="historial"></div>
-
-    <br><br><br>
-
-    
-    <button type="button" id="borrarHistorial">Borrar historial</button>
+    <button class="cajita" type="button" id="borrarHistorial">Borrar historial</button>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="index.js"></script>
 </body>
