@@ -1,6 +1,16 @@
 * {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    margin: 0;
+    padding: 0;
+/*     background-color: rgb(0, 0, 0);
+    color: white; */
+}
+
+.caja{
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .cajita {
@@ -8,10 +18,9 @@
     justify-content: center;
     text-align: center;
     border-radius: 15px;
-    box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.5);
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
 }
 
 .historial {
@@ -21,9 +30,27 @@
     gap: 2rem;
     justify-content: center;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.5);
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
 }
+
+h2 {
+    text-align: center;
+}
+.tabla-css {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 600px;
+    box-shadow: 0 0 25pX;
+    border-collapse: collapse;
+}
+.tabla-css thead tr {
+    text-align: center;
+}
+.tabla-css th,
+.tabla-css td {
+    padding: 20px 20px;
+    text-align: center;
+}
+
