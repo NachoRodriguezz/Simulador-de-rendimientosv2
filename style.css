@@ -39,18 +39,15 @@ h2 {
     text-align: center;
 }
 .tabla-css {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 600px;
+    width: 50vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
     box-shadow: 0 0 25pX;
     border-collapse: collapse;
-}
-.tabla-css thead tr {
-    text-align: center;
-}
-.tabla-css th,
-.tabla-css td {
-    padding: 20px 20px;
-    text-align: center;
+    padding: 0%;
 }
 
+.tabla-css{
+    width: 100%;
+}

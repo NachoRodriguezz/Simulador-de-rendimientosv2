@@ -78,4 +78,4 @@ const mostrarData = (data)=>{
         body += `<tr><td>${data[i].symbol}</td><td>${data[i].price}</td></tr>`
     }
     document.getElementById('data').innerHTML = body
-}    
+}
