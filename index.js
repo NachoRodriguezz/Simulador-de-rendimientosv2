@@ -65,8 +65,8 @@ boton.addEventListener("click", () => {
 });
 
 //api cryptocurrensy precios
-let endpoint = 'https://api.binance.com/api/v3/ticker/price'
-fetch(endpoint)
+
+fetch('https://api.binance.com/api/v3/ticker/price')
     .then( respuesta => respuesta.json() )
     .then( datos => mostrarData(datos))
     .catch( e => console.log(e))
