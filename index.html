@@ -34,24 +34,33 @@
             </section>
         </main>
         <button class="cajita" type="button" id="botonCalcular">Calcular</button>
-        <div class="cajita" id="el-resultado"></div>
+        <div class="card">
+            <div class="card-body" class="el-resultado" id="el-resultado" style="text-align: center;">
+            </div>
+        </div>
         <h1 class="cajita">Historial de inversiones</h1>
         <div class="historial" id="historial"></div>
-        <button class="cajita" type="button" id="borrarHistorial">Borrar historial</button>
+        <div class="d-grid gap-2">
+            <button class="btn btn-secondary" type="button" class="cajita"
+            id="borrarHistorial">Borrar historial</button>
+        </div>
     </main>
-    <h2>Cotizaciones de criptomonedas</h2>
-    <table class="tabla-css">
-        <main class="tablacss2">
-            <thead>
-                <tr>
-                    <th>Símbolo</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <tbody id="data">
-            </tbody>
+    <h2>Cotizaciones de Bitcoin</h2>
+    <table>
+        <main class="btc">
+            1 Bitcoin
+            <div class="coin-container" id="bitcoin">
+                <div class="coin bitcoin-item">₿</div>
+            </div>
+            =
+            <span id="usd-amount"></span>
+            <div class="coin-container" id="dollar">
+            </div>
         </main>
     </table>
+    <footer>
+        <div class="footer">Simulador de rendimientos BY Ignacio Rodriguez 2022</div>
+    </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

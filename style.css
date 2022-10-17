@@ -1,6 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
 }
 
 .caja {
@@ -12,6 +19,17 @@
 }
 
 .cajita {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.el-resultado {
+  background-color: gray;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -50,4 +68,44 @@ h2 {
 .tabla-css td {
   padding: 20px 20px;
   text-align: center;
+}
+
+.btc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.coin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px 5px 0;
+}
+
+.bitcoin-item {
+  background-color: #f6ff00;
+}
+
+.dollar-item {
+  background-color: gray;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

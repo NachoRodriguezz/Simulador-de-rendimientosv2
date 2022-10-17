@@ -4,7 +4,7 @@ function calcular() {
     let rendimiento = document.getElementById('rendimiento').value;
     let años = document.getElementById('años').value;
     let ganancias = (inversion * (rendimiento / 100) * años);
-    document.getElementById('el-resultado').innerHTML = ganancias = (ganancias || "Tus ganancias son nulas");
+    document.getElementById('el-resultado').innerHTML = (`Sus ganancias son de ${ganancias}` || "Tus ganancias son nulas");
     transacciones.push(new inversionTotal(nombre, inversion, rendimiento, años, ganancias))
     localStorage.clear();
     localStorage.setItem("transactionHistory", JSON.stringify(transacciones));
@@ -66,17 +66,21 @@ boton.addEventListener("click", () => {
 
 //api cryptocurrensy precios
 
-fetch('https://api.binance.com/api/v3/ticker/price')
-    .then( respuesta => respuesta.json() )
-    .then( datos => mostrarData(datos))
-    .catch( e => console.log(e))
+const dollarContainer = document.getElementById('dollar');
+const usdAmount = document.getElementById('usd-amount');
 
+fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+    .then(response => response.json())
+    .then(data => displayData(data));
 
-const mostrarData = (data)=>{
-    //console.log(data)
-    let body = ''
-    for (let i=0; i < data.length; i++) {
-        body += `<tr><td>${data[i].symbol}</td><td>${data[i].price}</td></tr>`
+const displayData = data => {
+    const usd = data.bpi.USD.rate_float;
+    usdAmount.textContent = `$${usd} USD`;
+    const totalDollarItems = Math.trunc(usd / 1000);
+    for (let i = 0; i < totalDollarItems; i++) {
+        const newDollar = document.createElement('div');
+        newDollar.textContent = '$';
+        newDollar.setAttribute('class', 'coin dollar-item');
+        dollarContainer.appendChild(newDollar);
     }
-    document.getElementById('data').innerHTML = body
-}    
+}
